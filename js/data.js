@@ -22,19 +22,19 @@ window.portfolioData = {
                 en: 'Software Engineering Laboratory'
             },
             type: {
-                id: 'Rekayasa Perangkat Lunak',
-                en: 'Software Engineering'
+                id: 'Pengembangan Web',
+                en: 'Web Development'
             },
             typeClass: 'academic',
             category: 'projects',
             needsConfirmation: true,
             description: {
-                id: 'Laboratorium Software Engineer merupakan laboratorium yang berfokus pada bidang rekayasa perangkat lunak (Software Engineering). Laboratorium ini berkaitan dengan proses pengembangan perangkat lunak secara terstruktur, mulai dari analisis kebutuhan, perancangan sistem, implementasi, hingga pengujian dan pemeliharaan perangkat lunak.\n\nBidang ini menekankan penerapan prinsip, metode, dan praktik rekayasa perangkat lunak untuk menghasilkan aplikasi yang terstruktur, dapat dipelihara, dan sesuai dengan kebutuhan pengguna. Laboratorium ini menjadi lingkungan untuk mempelajari serta mendalami konsep dan praktik pengembangan perangkat lunak.',
-                en: 'The Software Engineering Laboratory is a facility focused on the field of software engineering. It encompasses structured software development processes, from requirements analysis, system architecture design, and implementation to software testing and maintenance.\n\nThis discipline emphasizes applying software engineering principles, methodologies, and practices to deliver structured, maintainable software tailored to user needs. The laboratory provides an active environment for studying and deepening concepts and practices in software development.'
+                id: 'Laboratorium Software Engineer merupakan laboratorium yang berfokus pada bidang rekayasa perangkat lunak (Software Engineering) dan pengembangan web. Laboratorium ini berkaitan dengan proses pengembangan aplikasi secara terstruktur, mulai dari analisis kebutuhan, perancangan sistem, implementasi, hingga pengujian dan pemeliharaan aplikasi.\n\nBidang ini menekankan penerapan prinsip, metode, dan praktik pengembangan web dan software engineering untuk menghasilkan aplikasi yang terstruktur, dapat dipelihara, dan sesuai dengan kebutuhan pengguna.',
+                en: 'The Software Engineering Laboratory is a facility focused on the field of software engineering and web development. It encompasses structured software development processes, from requirements analysis, system architecture design, and implementation to software testing and maintenance.\n\nThis discipline emphasizes applying software engineering and web development principles, methodologies, and practices to deliver structured, maintainable software tailored to user needs.'
             },
             shortDescription: {
-                id: 'Laboratorium yang berfokus pada bidang rekayasa perangkat lunak dan proses pengembangan aplikasi yang terstruktur, handal, dan dapat dipelihara.',
-                en: 'A laboratory focused on software engineering and structured, reliable, maintainable application development processes.'
+                id: 'Laboratorium yang berfokus pada bidang pengembangan web dan proses pengembangan aplikasi yang terstruktur, handal, dan dapat dipelihara.',
+                en: 'A laboratory focused on web development and structured, reliable, maintainable application development processes.'
             },
             features: {
                 id: [
@@ -48,7 +48,7 @@ window.portfolioData = {
                     'Learning environment dedicated to developing maintainable and robust applications'
                 ]
             },
-            technologies: ['Software Engineering'],
+            technologies: ['HTML', 'CSS', 'JavaScript', 'PHP'],
             duration: null,
             role: null,
             challenges: null,
@@ -94,7 +94,7 @@ window.portfolioData = {
                     'Comfortable, practical, and structured user experience'
                 ]
             },
-            technologies: ['HTML', 'CSS', 'JavaScript'],
+            technologies: ['HTML', 'CSS', 'JavaScript', 'PHP Native'],
             duration: null,
             role: null,
             challenges: null,
@@ -192,7 +192,7 @@ window.portfolioData = {
                     'Application interface for monitoring data and harvest prediction parameters'
                 ]
             },
-            technologies: ['Machine Learning'],
+            technologies: ['Machine Learning', 'Flutter'],
             duration: null,
             role: null,
             challenges: null,

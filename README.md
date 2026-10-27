@@ -47,14 +47,14 @@ Saat ini, saya aktif mengembangkan kemampuan teknis dalam pengembangan web yang 
 
 Berikut beberapa proyek yang telah saya kembangkan dan pelajari:
 
+- **Software Engineering Laboratory (Proyek Akademik)**  
+  Penerapan prinsip rekayasa perangkat lunak terstruktur (SDLC), mencakup tahap analisis kebutuhan, perancangan sistem, implementasi, hingga pengujian aplikasi. *(HTML, CSS, JavaScript, PHP)*
 - **Website Rekomendasi Kafe**  
-  Platform web informatif untuk membantu pengguna menemukan referensi kafe dan tempat berkumpul yang sesuai, dengan tampilan antarmuka yang rapi dan mudah digunakan. *(HTML, CSS, JavaScript)*
+  Platform web informatif untuk membantu pengguna menemukan referensi kafe dan tempat berkumpul yang sesuai, dengan tampilan antarmuka yang rapi dan mudah digunakan. *(HTML, CSS, JavaScript, PHP Native)*
 - **Aplikasi Pengelolaan Keuangan**  
   Aplikasi berbasis Java yang dirancang untuk membantu pencatatan transaksi keuangan pribadi, pemantauan pengeluaran, serta pengelolaan data secara terstruktur. *(Java)*
-- **Software Engineering Laboratory (Proyek Akademik)**  
-  Penerapan prinsip rekayasa perangkat lunak terstruktur (SDLC), mencakup tahap analisis kebutuhan, perancangan sistem, implementasi, hingga pengujian aplikasi.
-- **Eksplorasi Machine Learning — Estimasi Panen Selada**  
-  Proyek pembelajaran penerapan model machine learning dasar untuk pengolahan data dan estimasi prediksi hasil panen tanaman selada.
+- **Eksplorasi Machine Learning & Mobile — Estimasi Panen Selada**  
+  Proyek pembelajaran penerapan model machine learning dasar untuk pengolahan data dan estimasi prediksi hasil panen tanaman selada yang dikembangkan bersama antarmuka aplikasi. *(Machine Learning, Flutter)*
 
 ---
 
@@ -71,6 +71,7 @@ Berikut beberapa proyek yang telah saya kembangkan dan pelajari:
 Teknologi dan alat yang saya pelajari serta gunakan dalam proyek akademik maupun eksplorasi mandiri:
 
 - **Bahasa Pemrograman & Web**: HTML, CSS, JavaScript, PHP, Java
+- **Framework & Mobile**: Flutter
 - **Basis Data**: MySQL
 - **Alat & Sistem Operasi**: Git, GitHub, Linux
 - **Bidang Terkait**: Fundamental Jaringan Komputer, Dasar Machine Learning, Cyber Security
