@@ -1,0 +1,228 @@
+/* ==========================================================================
+   Portfolio CSS - Hero
+   Hero layout, portrait, code card, and hero-specific presentation.
+   Extracted unchanged from css/style.css during Phase 05B.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   5. Hero
+   -------------------------------------------------------------------------- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(3.75rem, 7vw, 6rem) 0 clamp(4.5rem, 8vw, 7rem);
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(167, 157, 255, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(167, 157, 255, 0.055) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 65% at 55% 40%, #000 0%, transparent 78%);
+    mask-image: radial-gradient(ellipse 70% 65% at 55% 40%, #000 0%, transparent 78%);
+}
+
+.hero-gradient {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 18% 12%, rgba(91, 82, 240, 0.16) 0%, transparent 46%),
+        radial-gradient(ellipse at 82% 58%, rgba(139, 92, 246, 0.11) 0%, transparent 48%),
+        linear-gradient(180deg, transparent 70%, var(--bg) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: center;
+}
+
+.hero-copy {
+    min-width: 0;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--accent-border);
+    border-radius: var(--radius-pill);
+    background: var(--accent-soft);
+    color: var(--accent-light);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.hero-badge::before {
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: var(--accent-light);
+    box-shadow: 0 0 0 3px rgba(167, 157, 255, 0.12);
+}
+
+.hero-title {
+    margin-bottom: 0.9rem;
+    color: var(--text);
+    font-size: clamp(2.75rem, 5.8vw, 4.6rem);
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 1.02;
+}
+
+.title-line {
+    display: block;
+}
+
+.hero-title .title-line:last-child {
+    color: var(--accent-light);
+}
+
+.hero-headline {
+    margin-bottom: 0.9rem;
+    color: var(--text);
+    font-size: clamp(1.05rem, 2vw, 1.32rem);
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.hero-tagline {
+    max-width: 58ch;
+    color: var(--text-secondary);
+    font-size: 0.975rem;
+    line-height: 1.8;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+}
+
+
+
+.hero-note {
+    max-width: 52ch;
+    margin-top: 0.65rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    line-height: 1.55;
+}
+
+.hero-tech {
+    margin-top: 2rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--border);
+}
+
+.hero-tech__label {
+    margin-bottom: 0.7rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 430px;
+    min-width: 0;
+    margin-left: auto;
+    padding-bottom: 2rem;
+}
+
+.hero-portrait {
+    width: min(100%, 370px);
+    padding: 6px;
+    border-radius: 1.7rem;
+    background: linear-gradient(145deg, rgba(91, 82, 240, 0.85), rgba(139, 92, 246, 0.26) 46%, rgba(255, 255, 255, 0.07));
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-portrait img {
+    width: 100%;
+    aspect-ratio: 440 / 566;
+    height: auto;
+    border-radius: calc(1.7rem - 6px);
+    background: var(--surface);
+    object-fit: cover;
+    object-position: center top;
+}
+
+.code-card {
+    position: absolute;
+    right: -0.5rem;
+    bottom: 0;
+    width: min(300px, 82%);
+    padding: 0.95rem 1rem 1rem;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-lg);
+    background: rgba(9, 11, 26, 0.94);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+}
+
+.code-card__label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.04em;
+}
+
+.code-card__label::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    margin-right: 30px;
+    border-radius: 50%;
+    background: var(--danger);
+    box-shadow: 10px 0 var(--warning), 20px 0 var(--success);
+}
+
+.code-card pre {
+    margin: 0;
+    overflow-x: auto;
+    color: #c8cdf0;
+    font-size: 0.66rem;
+    line-height: 1.65;
+    scrollbar-width: thin;
+}
+

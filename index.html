@@ -1,586 +1,876 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.YAHYA IRVANSYAH | Academic Portfolio</title>
-    <meta name="description" content="Personal portfolio of M. Yahya Irvanskyah - Undergraduate Student in Applied Informatics">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Google Fonts for modern typography -->
+    <title>M. Yahya Irvansyah | Portofolio</title>
+    <meta name="description" content="Portofolio pribadi M. Yahya Irvansyah, mahasiswa D-IV Teknik Informatika di Politeknik Negeri Malang yang berfokus pada pengembangan web dan keamanan siber.">
+    <meta name="author" content="M. Yahya Irvansyah">
+    <meta name="theme-color" content="#090B1A">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090b1a'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='28' font-weight='700' text-anchor='middle' fill='%23a79dff'%3EYI%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/certificates.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Progress indicator for reading progress -->
-    <div class="reading-progress" id="readingProgress"></div>
+    <a class="skip-link" href="#main-content" data-i18n="skip.link">Lewati ke konten utama</a>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-bracket">{</span>YI<span class="logo-bracket">}</span>
+    <!-- Reading progress is retained from the previous version; it is decorative. -->
+    <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+    <!-- Header and navigation -->
+    <header class="navbar" id="navbar">
+        <nav class="nav-container" aria-label="Primary navigation">
+            <a href="#home" class="nav-logo" aria-label="M. Yahya Irvansyah — Beranda" data-i18n-attr="aria-label:nav.logoAria">
+                <span class="logo-bracket" aria-hidden="true">{</span>YI<span class="logo-bracket" aria-hidden="true">}</span>
             </a>
+
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#chapter1" class="nav-link" data-chapter="1">About Me</a></li>
-                <li><a href="#chapter2" class="nav-link" data-chapter="2">Skill</a></li>
-                <li><a href="#chapter3" class="nav-link" data-chapter="3">Experience</a></li>
-                <li><a href="#chapter4" class="nav-link" data-chapter="4">Certificates</a></li>
-                <li><a href="#contact" class="nav-link" data-chapter="contact">Contact</a></li>
+                <li><a href="#home" class="nav-link active" aria-current="location" data-i18n="nav.home">Beranda</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">Tentang</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Keahlian</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Proyek</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Pengalaman</a></li>
+                <li><a href="#social" class="nav-link" data-i18n="nav.social">Sosial</a></li>
             </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
 
-    <!-- Hero Section - The Beginning of the Journey -->
-    <section class="hero" id="hero">
-        <div class="hero-background">
-            <div class="hero-grid"></div>
-            <div class="hero-gradient"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-badge">Undergraduate Student</div>
-            <h1 class="hero-title">
-                <span class="title-line">M.YAHYA</span>
-                <span class="title-line">IRVANSYAH</span>
-            </h1>
-            <p class="hero-tagline">Documenting my academic journey as a developer</p>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="4">0</span>
-                    <span class="stat-label">Chapters</span>
+            <div class="nav-actions">
+                <div class="lang-switcher" role="group" aria-label="Pilih Bahasa / Language Selection">
+                    <button type="button" class="lang-btn active" data-lang="id" aria-pressed="true" aria-label="Bahasa Indonesia">ID</button>
+                    <span class="lang-divider" aria-hidden="true">/</span>
+                    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="3">0</span>
-                    <span class="stat-label">Projects</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="2023">0</span>
-                    <span class="stat-label">Started</span>
-                </div>
-            </div>
-            <a href="#chapter1" class="cta-button">
-                <span>Begin the Journey</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 5v14M5 12l7 7 7-7"/>
-                </svg>
-            </a>
-        </div>
-        <div class="hero-scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll to explore</span>
-        </div>
-    </section>
 
-    <!-- Chapter 1: About Me - The Beginning -->
-    <section class="chapter" id="chapter1">
-        <div class="chapter-header">
-            <span class="chapter-number">01</span>
-            <h2 class="chapter-title">The Beginning</h2>
-            <p class="chapter-subtitle">Where it all started</p>
-        </div>
-        <div class="chapter-content">
-            <div class="about-grid">
-                <div class="about-image">
-                    <div class="image-frame">
-                        <div class="image-placeholder">
-                            <img src="Yahya_Formal.png" alt="M. Yahya Irvanskyah">
-                        </div>
-                    </div>
-                    <div class="floating-badge">2023</div>
-                </div>
-                <div class="about-text">
-                    <div class="story-card">
-                        <h3>Entering University</h3>
-                        <p>When I first stepped into the campus of Politeknik Negeri Malang in 2023, I carried nothing but curiosity and a willingness to learn. The world of technology seemed vast and intimidating, yet exciting at the same time.</p>
-                        
-                        <h3>The Spark</h3>
-                        <p>My journey into programming began with a simple question: "How do websites work?" That curiosity led me to explore HTML, and before I knew it, I was hooked on the logic and creativity that coding offers.</p>
-                        
-                        <h3>My Focus</h3>
-                        <p>Currently pursuing D-IV Applied Informatics, I'm dedicated to mastering web development and building real-world projects. Every line of code I write is a step forward in becoming a professional developer.</p>
-                    </div>
-                    
-                    <div class="quick-facts">
-                        <div class="fact-item">
-                            <span class="fact-icon">🎓</span>
-                            <div>
-                                <strong>Education</strong>
-                                <p>D-IV Applied Informatics<br>Politeknik Negeri Malang</p>
-                            </div>
-                        </div>
-                        <div class="fact-item">
-                            <span class="fact-icon">📍</span>
-                            <div>
-                                <strong>Location</strong>
-                                <p>Malang, East Java<br>Indonesia</p>
-                            </div>
-                        </div>
-                        <div class="fact-item">
-                            <span class="fact-icon">🎯</span>
-                            <div>
-                                <strong>Focus</strong>
-                                <p>Web Development<br>Programming</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" data-i18n-attr="aria-label:nav.toggleOpen" aria-expanded="false" aria-controls="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- Chapter 2: Skills - Learning to Code -->
-    <section class="chapter" id="chapter2">
-        <div class="chapter-header">
-            <span class="chapter-number">02</span>
-            <h2 class="chapter-title">Learning to Code</h2>
-            <p class="chapter-subtitle">Building my toolkit</p>
-        </div>
-        <div class="chapter-content">
-            <div class="skills-container">
-                <!-- Technical Skills -->
-                <div class="skills-section">
-                    <h3 class="section-title">
-                        <span class="title-icon">💻</span>
-                        Technical Skills
-                    </h3>
-                    <div class="skills-grid">
-                        <!-- Java -->
-                        <div class="skill-card" data-skill="java">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12.087 16.364l-2.417-5.839 2.455.533.008 5.306zm-2.467-7.729l-2.253 5.873-2.453-.604 2.453-5.823 2.253.554zm-.533 1.142l-1.457 5.873-1.667-.413-1.719 1.302 4.843 1.224V9.777zm-2.008 2.458l-2.223-.574.008-4.372 2.215 4.946zm-2.093-5.729c0-.276.224.016.5.087l.492-.984c-.316-.08-.508-.127-.992-.127-.508 0-.676.08-.992.127l.492.984c.276-.071.5-.363.5-.639v-.4h1.042v.447zm-2.223-.571l2.215-4.946v4.372l-2.223.574zm-2.093 2.222l-1.667.413-1.457-5.873h1.042v-1.168l4.843-1.224-1.719-1.302-2.042.503zm-1.792-6.185l2.508-.607 1.5 3.713-2.508.607L8.381 1.5zm.758 6.372l1.375-3.398 1.375 3.398h-2.75zm2.375-4.398l1.458-3.713 2.507.607-1.5 3.713-2.465-.607z"/>
+    <main id="main-content">
+        <noscript>
+            <p class="noscript-note" data-i18n="noscript.note">JavaScript dinonaktifkan. Kotak dialog detail proyek dan pesan interaktif tidak akan berfungsi.</p>
+        </noscript>
+
+        <!-- Hero -->
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="hero-background" aria-hidden="true">
+                <div class="hero-grid"></div>
+                <div class="hero-gradient"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-layout">
+                    <div class="hero-copy">
+                        <p class="hero-badge" data-i18n="hero.badge">Mahasiswa Informatika &middot; Cyber Security</p>
+
+                        <h1 class="hero-title" id="hero-title">
+                            <span class="title-line">M. Yahya</span>
+                            <span class="title-line">Irvansyah</span>
+                        </h1>
+
+                        <p class="hero-headline" data-i18n="hero.headline">Web Development & Cyber Security Enthusiast.</p>
+
+                        <p class="hero-tagline" data-i18n="hero.tagline">
+                            Mahasiswa D-IV Teknik Informatika di Politeknik Negeri Malang yang memiliki ketertarikan pada Web Development dan Cyber Security. 
+                            Memiliki pengalaman mengembangkan proyek aplikasi web serta dasar jaringan komputer, dan terus mengembangkan kemampuan melalui perkuliahan dan pembelajaran mandiri.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a href="#projects" class="cta-button">
+                                <span data-i18n="hero.viewWork">Lihat Karya Saya</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                                    <path d="M12 5v14M5 12l7 7 7-7"/>
                                 </svg>
-                            </div>
-                            <h4>Java</h4>
-                            <p>Object-oriented programming fundamentals</p>
-                            <div class="skill-level">
-                                <div class="level-bar" data-level="65"></div>
-                            </div>
-                            <span class="level-text">Intermediate</span>
-                        </div>
+                            </a>
 
-                        <!-- Web Development -->
-                        <div class="skill-card" data-skill="web">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="16 18 22 12 16 6"/>
-                                    <polyline points="8 6 2 12 8 18"/>
+                            <a href="https://drive.google.com/file/d/1gJ-1r9pQ1tw6VULwW-rnERMRDswLu5Z7/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                                <span data-i18n="hero.downloadCv">Lihat CV</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
                                 </svg>
-                            </div>
-                            <h4>Web Development</h4>
-                            <p>HTML, CSS, JavaScript</p>
-                            <div class="skill-level">
-                                <div class="level-bar" data-level="75"></div>
-                            </div>
-                            <span class="level-text">Proficient</span>
+                            </a>
+                        </div> 
+
+                        <div class="hero-tech">
+                            <p class="hero-tech__label" data-i18n="hero.techLabel">Teknologi yang saya gunakan</p>
+                            <ul class="tech-list" aria-label="Technologies I work with">
+                                <li class="tech-tag">HTML</li>
+                                <li class="tech-tag">CSS</li>
+                                <li class="tech-tag">JavaScript</li>
+                                <li class="tech-tag">Java</li>
+                                <li class="tech-tag">MySQL</li>
+                                <li class="tech-tag">Git</li>
+                                <li class="tech-tag">PHP</li>
+                                <li class="tech-tag">Linux</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="hero-portrait">
+                            <img
+                                src="img/Yahya-Foto_Baru.png"
+                                alt="Portrait of M. Yahya Irvansyah"
+                                width="440"
+                                height="566"
+                                fetchpriority="high"
+                                decoding="async"
+                            >
                         </div>
 
-                        <!-- Database -->
-                        <div class="skill-card" data-skill="db">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-                                </svg>
-                            </div>
-                            <h4>Database</h4>
-                            <p>SQL, MySQL, Database Design</p>
-                            <div class="skill-level">
-                                <div class="level-bar" data-level="60"></div>
-                            </div>
-                            <span class="level-text">Intermediate</span>
-                        </div>
-
-                        <!-- Git & Version Control -->
-                        <div class="skill-card" data-skill="git">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                                </svg>
-                            </div>
-                            <h4>Git & Version Control</h4>
-                            <p>Git, GitHub workflows</p>
-                            <div class="skill-level">
-                                <div class="level-bar" data-level="70"></div>
-                            </div>
-                            <span class="level-text">Proficient</span>
+                        <div class="code-card" aria-hidden="true">
+                            <p class="code-card__label">Cyber Security</p>
+                            <pre><code>const yahya = {
+    role: "Cyber Security",
+    focus: "Security",
+    stack: ["HTML", "CSS", "JavaScript", "Python", "Linux"],
+    learning: true
+};</code></pre>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Soft Skills -->
-                <div class="skills-section">
-                    <h3 class="section-title">
-                        <span class="title-icon">🧠</span>
-                        Soft Skills
-                    </h3>
-                    <div class="soft-skills-grid">
-                        <div class="soft-skill-item">
-                            <span class="soft-skill-icon">🔍</span>
-                            <span class="soft-skill-name">Problem Solving</span>
+        <!-- About -->
+        <section class="section chapter" id="about" aria-labelledby="about-title">
+            <header class="section__header chapter-header">
+                <span class="section__eyebrow" data-i18n="about.eyebrow">Tentang</span>
+                <h2 class="section__title chapter-title" id="about-title" data-i18n="about.title">Awal perjalanan saya di dunia pengembangan perangkat lunak</h2>
+                <p class="section__subtitle chapter-subtitle" data-i18n="about.subtitle">Ketika rasa ingin tahu berubah menjadi baris kode.</p>
+            </header>
+
+            <div class="section__inner chapter-content">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <div class="image-placeholder">
+                                <img
+                                    src="img/Yahya-Foto_Baru.png"
+                                    alt="Portrait of M. Yahya Irvansyah"
+                                    width="440"
+                                    height="566"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </div>
                         </div>
-                        <div class="soft-skill-item">
-                            <span class="soft-skill-icon">🤝</span>
-                            <span class="soft-skill-name">Team Collaboration</span>
-                        </div>
-                        <div class="soft-skill-item">
-                            <span class="soft-skill-icon">📚</span>
-                            <span class="soft-skill-name">Fast Learner</span>
-                        </div>
-                        <div class="soft-skill-item">
-                            <span class="soft-skill-icon">💡</span>
-                            <span class="soft-skill-name">Creative Thinking</span>
-                        </div>
-                        <div class="soft-skill-item">
-                            <span class="soft-skill-icon">⏰</span>
-                            <span class="soft-skill-name">Time Management</span>
-                        </div>
-                        <div class="soft-skill-item">
-                            <span class="soft-skill-icon">📝</span>
-                            <span class="soft-skill-name">Documentation</span>
-                        </div>
+                        <span class="floating-badge">2023</span>
                     </div>
-                </div>
 
-                <!-- Learning Journey Timeline -->
-                <div class="timeline-section">
-                    <h3 class="section-title">
-                        <span class="title-icon">📅</span>
-                        Learning Journey
-                    </h3>
-                    <div class="timeline">
-                        <div class="timeline-item" data-year="2023">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>Started University</h4>
-                                <p>Began my journey in Applied Informatics, first exposure to programming concepts.</p>
-                            </div>
+                    <div class="about-text">
+                        <div class="story-card">
+                            <h3 data-i18n="about.storyTitle1">Memasuki dunia perkuliahan</h3>
+                            <p data-i18n="about.storyText1">
+                                Perjalanan saya dimulai di Politeknik Negeri Malang saat menempuh pendidikan di program studi D-IV Teknik Informatika. Melalui perkuliahan, saya mulai mengeksplorasi dunia teknologi, mempelajari cara kerja perangkat lunak, bagaimana aplikasi dibangun, dan bagaimana teknologi dapat menyelesaikan masalah nyata.
+                            </p>
+
+                            <h3 data-i18n="about.storyTitle2">Awal mula ketertarikan</h3>
+                            <p data-i18n="about.storyText2">
+                                Fokus akademik saya mencakup pengembangan web, pengembangan aplikasi, dan manajemen basis data. Namun, rasa ingin tahu saya berkembang lebih dari sekadar membangun sistem yang fungsional. Saya juga tertarik memahami bagaimana sistem dapat dieksploitasi, di mana celah keamanan berada, dan bagaimana lingkungan digital dapat dibuat lebih aman.
+                            </p>
+
+                            <h3 data-i18n="about.storyTitle3">Fokus saat ini</h3>
+                            <p data-i18n="about.storyText3">
+                                Saat ini saya sedang memperdalam kemampuan dalam pengembangan web sembari mengeksplorasi bidang keamanan siber, khususnya keamanan web, analisis kerentanan, dan pengujian penetrasi. Tujuan saya adalah memadukan pemahaman tentang bagaimana aplikasi dibangun dengan pengetahuan tentang bagaimana melindunginya, menciptakan sistem yang tidak hanya fungsional tetapi juga aman dan andal.
+                            </p>
                         </div>
-                        <div class="timeline-item" data-year="2023">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>First Web Page</h4>
-                                <p>Created my first HTML page. The spark that ignited my passion for web development.</p>
+
+                        <div class="quick-facts">
+                            <div class="fact-item">
+                                <span class="fact-icon" aria-hidden="true">🎓</span>
+                                <div>
+                                    <strong data-i18n="about.factEducation">Pendidikan</strong>
+                                    <p data-i18n="about.factEducationVal">D-IV Teknik Informatika<br>Politeknik Negeri Malang</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="timeline-item" data-year="2024">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>Java Mastery</h4>
-                                <p>Dived deep into Java OOP concepts and built several console applications.</p>
+
+                            <div class="fact-item">
+                                <span class="fact-icon" aria-hidden="true">📍</span>
+                                <div>
+                                    <strong data-i18n="about.factLocation">Lokasi</strong>
+                                    <p data-i18n="about.factLocationVal">Malang, Jawa Timur<br>Indonesia</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="timeline-item" data-year="2024">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>Database Design</h4>
-                                <p>Learned SQL and database design principles, working on academic projects.</p>
+
+                            <div class="fact-item">
+                                <span class="fact-icon" aria-hidden="true">🎯</span>
+                                <div>
+                                    <strong data-i18n="about.factFocus">Fokus</strong>
+                                    <p data-i18n="about.factFocusVal">Pengembangan Web<br>Keamanan Siber</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Chapter 3: Projects - Experiments & Applications -->
-    <section class="chapter" id="chapter3">
-        <div class="chapter-header">
-            <span class="chapter-number">03</span>
-            <h2 class="chapter-title">Projects & Experiments</h2>
-            <p class="chapter-subtitle">Building real things</p>
-        </div>
-        <div class="chapter-content">
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="academic">Academic</button>
-                <button class="filter-btn" data-filter="personal">Personal</button>
-            </div>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" data-category="academic">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                <line x1="8" y1="21" x2="16" y2="21"/>
-                                <line x1="12" y1="17" x2="12" y2="21"/>
-                            </svg>
-                        </div>
-                        <div class="project-overlay">
-                            <button class="view-details-btn" data-project="1">View Details</button>
+        <!-- Skills -->
+        <section class="section chapter" id="skills" aria-labelledby="skills-title">
+            <header class="section__header chapter-header">
+                <span class="section__eyebrow" data-i18n="skills.eyebrow">Keahlian</span>
+                <h2 class="section__title chapter-title" id="skills-title" data-i18n="skills.title">Mempelajari pemrograman &amp; teknologi</h2>
+                <p class="section__subtitle chapter-subtitle" data-i18n="skills.subtitle">Membangun keahlian setahap demi setahap melalui setiap proyek.</p>
+            </header>
+
+            <div class="section__inner chapter-content">
+                <div class="skills-container" id="skillsContainer" data-skills-container>
+                    <div class="skills-section">
+                        <h3 class="section-title" data-i18n="skills.technicalTitle">Kemampuan teknis</h3>
+                        <p class="section-note" data-i18n="skills.sectionNote">
+                            Tingkat kemampuan teknis dinilai secara realistis berdasarkan pemahaman konsep dan pengalaman implementasi proyek.
+                        </p>
+
+                        <div class="skills-grid" id="skillsGrid" data-skills-grid>
+                            <article class="skill-card" data-category="web-development" data-level="intermediate">
+                                <div class="skill-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" focusable="false">
+                                        <polyline points="16 18 22 12 16 6"/>
+                                        <polyline points="8 6 2 12 8 18"/>
+                                    </svg>
+                                </div>
+                                <h4>Web Development</h4>
+                                <p data-i18n="skills.webDesc">
+                                    Memiliki kemampuan tingkat menengah dalam pengembangan web, termasuk membangun antarmuka, menyusun struktur halaman, mengelola styling, dan mengembangkan fungsi website menggunakan teknologi yang telah dipelajari.
+                                </p>
+                                <ul class="skill-tags" aria-label="Teknologi Web Development">
+                                    <li class="tech-tag">HTML</li>
+                                    <li class="tech-tag">CSS</li>
+                                    <li class="tech-tag">JavaScript</li>
+                                </ul>
+                                <div class="skill-level-row">
+                                    <span class="skill-level-label" data-i18n="skills.levelLabel">Level:</span>
+                                    <span class="skill-badge-level intermediate" data-i18n="skills.level.intermediate">Intermediate</span>
+                                </div>
+                            </article>
+
+                            <article class="skill-card" data-category="application-development" data-level="beginner">
+                                <div class="skill-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                    </svg>
+                                </div>
+                                <h4>Application Development</h4>
+                                <p data-i18n="skills.appDesc">
+                                    Memiliki pemahaman dasar dalam pengembangan aplikasi menggunakan Java, termasuk mempelajari logika program, struktur kode, dan implementasi fungsi aplikasi.
+                                </p>
+                                <ul class="skill-tags" aria-label="Teknologi Application Development">
+                                    <li class="tech-tag">Java</li>
+                                    <li class="tech-tag">JavaFX</li>
+                                    <li class="tech-tag">MySQL</li>
+                                </ul>
+                                <div class="skill-level-row">
+                                    <span class="skill-level-label" data-i18n="skills.levelLabel">Level:</span>
+                                    <span class="skill-badge-level beginner" data-i18n="skills.level.beginner">Beginner</span>
+                                </div>
+                            </article>
+
+                            <article class="skill-card" data-category="cyber-security" data-level="beginner-intermediate">
+                                <div class="skill-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <h4>Cyber Security</h4>
+                                <p data-i18n="skills.secDesc">
+                                    Memiliki pemahaman dasar hingga menengah awal mengenai konsep keamanan siber dan sedang memperdalam pengetahuan melalui pembelajaran serta latihan secara bertahap.
+                                </p>
+                                <ul class="skill-tags" aria-label="Teknologi Cyber Security">
+                                    <li class="tech-tag">Security Concepts</li>
+                                    <li class="tech-tag">Linux</li>
+                                    <li class="tech-tag">ITBOX Course</li>
+                                </ul>
+                                <div class="skill-level-row">
+                                    <span class="skill-level-label" data-i18n="skills.levelLabel">Level:</span>
+                                    <span class="skill-badge-level beginner-intermediate" data-i18n="skills.level.beginnerIntermediate">Beginner&ndash;Intermediate</span>
+                                </div>
+                            </article>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <span class="project-type academic">Academic Project</span>
-                        <h3>LABSE Website</h3>
-                        <p>A full-stack web application for Laboratory of Software Engineering at Politeknik Negeri Malang.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                        <div class="project-status">
-                            <span class="status-badge completed">Completed</span>
+
+                    <div class="skills-section">
+                        <h3 class="section-title" data-i18n="skills.workingStyleTitle">Gaya kerja</h3>
+                        <div class="soft-skills-grid">
+                            <div class="soft-skill-item">
+                                <span class="soft-skill-icon" aria-hidden="true">🔍</span>
+                                <span class="soft-skill-name" data-i18n="skills.soft.problemSolving">Pemecahan Masalah</span>
+                            </div>
+                            <div class="soft-skill-item">
+                                <span class="soft-skill-icon" aria-hidden="true">🤝</span>
+                                <span class="soft-skill-name" data-i18n="skills.soft.teamCollab">Kolaborasi Tim</span>
+                            </div>
+                            <div class="soft-skill-item">
+                                <span class="soft-skill-icon" aria-hidden="true">📚</span>
+                                <span class="soft-skill-name" data-i18n="skills.soft.fastLearner">Cepat Belajar</span>
+                            </div>
+                            <div class="soft-skill-item">
+                                <span class="soft-skill-icon" aria-hidden="true">💡</span>
+                                <span class="soft-skill-name" data-i18n="skills.soft.creativeThinking">Berpikir Kreatif</span>
+                            </div>
+                            <div class="soft-skill-item">
+                                <span class="soft-skill-icon" aria-hidden="true">⏰</span>
+                                <span class="soft-skill-name" data-i18n="skills.soft.timeManagement">Manajemen Waktu</span>
+                            </div>
+                            <div class="soft-skill-item">
+                                <span class="soft-skill-icon" aria-hidden="true">📝</span>
+                                <span class="soft-skill-name" data-i18n="skills.soft.documentation">Dokumentasi</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Project 2 -->
-                <div class="project-card" data-category="academic">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M12 6v6l4 2"/>
-                            </svg>
-                        </div>
-                        <div class="project-overlay">
-                            <button class="view-details-btn" data-project="2">View Details</button>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type academic">Academic Project</span>
-                        <h3>Attendance System</h3>
-                        <p>A Java-based attendance management system with GUI interface for class management.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">JavaFX</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                        <div class="project-status">
-                            <span class="status-badge completed">Completed</span>
-                        </div>
-                    </div>
+        <!-- Projects -->
+        <section class="section chapter" id="projects" aria-labelledby="projects-title">
+            <header class="section__header chapter-header">
+                <span class="section__eyebrow" data-i18n="projects.eyebrow">Proyek</span>
+                <h2 class="section__title chapter-title" id="projects-title" data-i18n="projects.title">Proyek &amp; Eksperimen</h2>
+                <p class="section__subtitle chapter-subtitle" data-i18n="projects.subtitle">Membangun karya nyata, satu iterasi demi satu iterasi.</p>
+            </header>
+
+            <div class="section__inner chapter-content">
+                <p class="section-note" data-i18n="projects.note">
+                    Deskripsi proyek, status penyelesaian, dan detail modal diambil dari portofolio sebelumnya. Detail repositori, demo, tangkapan layar, dan persentase yang sedang berlangsung masih memerlukan konfirmasi. Proyek yang selesai ditampilkan 100%.
+                </p>
+
+                <div class="projects-filter" role="group" aria-label="Saring konten berdasarkan kategori" data-i18n-attr="aria-label:projects.filterAria">
+                    <button class="filter-btn active" type="button" data-filter="projects" aria-pressed="true" data-i18n="projects.filterProjects">Proyek</button>
+                    <button class="filter-btn" type="button" data-filter="certificates" aria-pressed="false" data-i18n="projects.filterCertificates">Sertifikat</button>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card" data-category="personal">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14 2 14 8 20 8"/>
-                                <line x1="16" y1="13" x2="8" y2="13"/>
-                                <line x1="16" y1="17" x2="8" y2="17"/>
-                            </svg>
-                        </div>
-                        <div class="project-overlay">
-                            <button class="view-details-btn" data-project="3">View Details</button>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type personal">Personal Project</span>
-                        <h3>Portfolio Website</h3>
-                        <p>This portfolio website you are viewing - built with pure HTML, CSS, and JavaScript.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-status">
-                            <span class="status-badge in-progress">In Progress</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <p class="projects-status" id="projectsStatus" role="status" aria-live="polite"></p>
 
-    <!-- Project Modal -->
-    <div class="modal" id="projectModal">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <div class="modal-body" id="modalBody">
-                <!-- Dynamic content loaded via JavaScript -->
-            </div>
-        </div>
-    </div>
+                <div class="projects-grid" id="projectsGrid" data-projects-grid>
+                    <article class="project-card" data-category="projects" data-project-id="software-engineering-laboratory">
+                        <div class="project-image">
+                            <img
+                                src="img/SE.jpg"
+                                alt="Laboratorium Software Engineer"
+                                width="1452"
+                                height="817"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
 
-    <!-- Chapter 4: Certificates & Experience -->
-    <section class="chapter" id="chapter4">
-        <div class="chapter-header">
-            <span class="chapter-number">04</span>
-            <h2 class="chapter-title">Certificates & Experience</h2>
-            <p class="chapter-subtitle">Milestones achieved</p>
-        </div>
-        <div class="chapter-content">
-            <!-- Certificates Section -->
-            <div class="certificates-section">
-                <h3 class="section-title">
-                    <span class="title-icon">🎖️</span>
-                    Certificates
-                </h3>
-                <div class="certificates-grid">
-                    <div class="certificate-card">
-                        <div class="certificate-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <div class="project-info">
+                            <span class="project-type academic">Rekayasa Perangkat Lunak</span>
+                            <h3>Software Engineering Laboratory</h3>
+                            <p>
+                                Laboratorium yang berfokus pada bidang rekayasa perangkat lunak dan proses pengembangan aplikasi yang terstruktur, handal, dan dapat dipelihara.
+                            </p>
+
+                            <ul class="project-tech" aria-label="Technologies used">
+                                <li class="tech-tag">Software Engineering</li>
+                            </ul>
+
+                            <div class="project-status">
+                                <span class="status-badge completed" data-status="completed">Selesai</span>
+                                <span class="project-progress-label">Progres: 100%</span>
+                            </div>
+                            <progress class="project-progress" max="100" value="100" aria-label="Software Engineering Laboratory progress">100%</progress>
+
+                            <div class="project-actions">
+                                <button class="view-details-btn" type="button" data-project="software-engineering-laboratory" aria-haspopup="dialog">Lihat Detail</button>
+                                <p class="project-link-note">Tautan repositori dan demo belum tersedia.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="projects" data-project-id="cafe-recommendation-website">
+                        <div class="project-image">
+                            <img
+                                src="img/R_CAFE.jpg"
+                                alt="Pratinjau antarmuka Cafe Recommendation Website"
+                                width="1600"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="project-info">
+                            <span class="project-type personal">Pengembangan Web</span>
+                            <h3>Cafe Recommendation Website</h3>
+                            <p>
+                                Website rekomendasi kafe untuk membantu pengguna menemukan referensi tempat nongkrong dan menikmati kopi melalui antarmuka yang informatif.
+                            </p>
+
+                            <ul class="project-tech" aria-label="Technologies used">
+                                <li class="tech-tag">HTML</li>
+                                <li class="tech-tag">CSS</li>
+                                <li class="tech-tag">JavaScript</li>
+                            </ul>
+
+                            <div class="project-status">
+                                <span class="status-badge completed" data-status="completed">Selesai</span>
+                                <span class="project-progress-label">Progres: 100%</span>
+                            </div>
+                            <progress class="project-progress" max="100" value="100" aria-label="Cafe Recommendation Website progress">100%</progress>
+
+                            <div class="project-actions">
+                                <button class="view-details-btn" type="button" data-project="cafe-recommendation-website" aria-haspopup="dialog">Lihat Detail</button>
+                                <p class="project-link-note">Tautan repositori dan demo belum tersedia.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="projects" data-project-id="app-pengelolaan-keuangan">
+                        <div class="project-image">
+                            <img
+                                src="img/APP_KEUANGAN.jpg"
+                                alt="Preview Aplikasi Pengelolaan Keuangan Berbasis Java"
+                                width="1142"
+                                height="781"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="project-info">
+                            <span class="project-type personal">Pengembangan Aplikasi</span>
+                            <h3>App Pengelolaan Keuangan</h3>
+                            <p>
+                                Aplikasi berbasis Java untuk membantu pengguna mengelola data keuangan dan memantau statistik pengeluaran secara lebih terstruktur.
+                            </p>
+
+                            <ul class="project-tech" aria-label="Technologies used">
+                                <li class="tech-tag">Java</li>
+                            </ul>
+
+                            <div class="project-status">
+                                <span class="status-badge completed" data-status="completed">Selesai</span>
+                                <span class="project-progress-label">Progres: 100%</span>
+                            </div>
+                            <progress class="project-progress" max="100" value="100" aria-label="App Pengelolaan Keuangan progress">100%</progress>
+
+                            <div class="project-actions">
+                                <button class="view-details-btn" type="button" data-project="app-pengelolaan-keuangan" aria-haspopup="dialog">Lihat Detail</button>
+                                <p class="project-link-note">Tautan repositori dan demo belum tersedia.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="projects" data-project-id="estimasi-panen-tanaman-selada">
+                        <div class="project-image">
+                            <img
+                                src="img/SELADA.png"
+                                alt="Pratinjau Aplikasi Estimasi Panen Tanaman Selada"
+                                width="1411"
+                                height="802"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="project-info">
+                            <span class="project-type personal">Machine Learning</span>
+                            <h3>Estimasi Panen Tanaman Selada</h3>
+                            <p>
+                                Aplikasi berbasis Machine Learning untuk membantu melakukan estimasi panen tanaman selada berdasarkan data yang digunakan dalam proses prediksi.
+                            </p>
+
+                            <ul class="project-tech" aria-label="Technologies used">
+                                <li class="tech-tag">Machine Learning</li>
+                            </ul>
+
+                            <div class="project-status">
+                                <span class="status-badge in-progress" data-status="in-progress">Sedang Berjalan</span>
+                                <span class="project-progress-label">Progres: 40%</span>
+                            </div>
+                            <progress class="project-progress" max="100" value="40" aria-label="Estimasi Panen Tanaman Selada progress">40%</progress>
+
+                            <div class="project-actions">
+                                <button class="view-details-btn" type="button" data-project="estimasi-panen-tanaman-selada" aria-haspopup="dialog">Lihat Detail</button>
+                                <p class="project-link-note">Tautan repositori dan demo belum tersedia.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card hidden" data-category="certificates" data-project-id="lspsmk-jaringan-komputer">
+                        <div class="project-image">
+                            <img
+                                src="img/LSPSMK_thumb.jpg"
+                                alt="Preview Sertifikat Kompetensi Bidang Jaringan Komputer"
+                                width="1280"
+                                height="720"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="project-info">
+                            <span class="project-type academic">Certificates</span>
+                            <h3>Kompetensi Bidang Jaringan Komputer</h3>
+                            <p>
+                                Sertifikat ini mencakup unit kompetensi di bidang jaringan komputer, mulai dari pengumpulan data perangkat jaringan, perancangan topologi dan pengalamatan jaringan, penentuan spesifikasi perangkat, hingga pemasangan kabel jaringan.
+                            </p>
+
+                            <ul class="project-tech" aria-label="Bidang kompetensi">
+                                <li class="tech-tag">Jaringan Komputer</li>
+                                <li class="tech-tag">Infrastruktur Jaringan</li>
+                            </ul>
+
+                            <div class="project-status">
+                                <span class="status-badge completed" data-status="completed">Verified Document</span>
+                                <span class="project-progress-label">2 Pages PDF</span>
+                            </div>
+                            <progress class="project-progress" max="100" value="100" aria-label="Status sertifikat resmi" aria-valuetext="Dokumen sertifikat terverifikasi">100%</progress>
+
+                            <div class="project-actions">
+                                <div class="project-action-buttons">
+                                    <a href="assets/certificates/LSPSMK.pdf" target="_blank" rel="noopener noreferrer" class="view-details-btn btn-primary">Lihat Sertifikat</a>
+                                    <button class="view-details-btn" type="button" data-project="lspsmk-jaringan-komputer" aria-haspopup="dialog">Lihat Detail</button>
+                                </div>
+                                <p class="project-link-note">Dokumen sertifikat resmi format PDF (2 halaman).</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card hidden" data-category="certificates" data-project-id="itbox-cyber-security">
+                        <div class="project-image">
+                            <img
+                                src="img/itbox.jpg"
+                                alt="Preview Cyber Security Course — ITBOX"
+                                class="img-center"
+                                width="900"
+                                height="900"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="project-info">
+                            <span class="project-type academic">Certificates</span>
+                            <h3>Cyber Security Course — ITBOX</h3>
+                            <p>
+                                Course Cyber Security dari ITBOX yang sedang dipelajari untuk memperdalam pemahaman mengenai keamanan siber, konsep dasar perlindungan sistem, dan pengetahuan keamanan digital.
+                            </p>
+
+                            <ul class="project-tech" aria-label="Bidang pembelajaran">
+                                <li class="tech-tag">Cyber Security</li>
+                                <li class="tech-tag">ITBOX</li>
+                            </ul>
+
+                            <div class="project-status">
+                                <span class="status-badge in-progress" data-status="in-progress">Sedang Berjalan</span>
+                                <span class="project-progress-label">Progres: 20%</span>
+                            </div>
+                            <progress class="project-progress" max="100" value="20" aria-label="Cyber Security Course — ITBOX progress">20%</progress>
+
+                            <div class="project-actions">
+                                <div class="project-action-buttons">
+                                    <button class="view-details-btn" type="button" data-project="itbox-cyber-security" aria-haspopup="dialog">Lihat Detail</button>
+                                </div>
+                                <p class="project-link-note">Course sedang dipelajari (sertifikat kelulusan belum tersedia).</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card hidden" data-category="certificates" data-project-id="cyber-security-wpu-course">
+                        <div class="project-image">
+                            <img
+                                src="img/wpu.jpg"
+                                alt="Preview WPU Course - Cyber Security"
+                                width="1280"
+                                height="720"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="project-info">
+                            <span class="project-type academic">Certificates</span>
+                            <h3>Cyber Security Course - WPU Course</h3>
+                            <p>
+                                Course WPU yang direncanakan sebagai materi pembelajaran untuk mengembangkan kemampuan pemrograman dan pengembangan aplikasi.
+                            </p>
+
+                            <ul class="project-tech" aria-label="Bidang pembelajaran">
+                                <li class="tech-tag">cyber-security</li>
+                                <li class="tech-tag">Security</li>
+                            </ul>
+
+                            <div class="project-status">
+                                <span class="status-badge not-started" data-status="not-started">Belum Dimulai</span>
+                                <span class="project-progress-label">Progres: 0%</span>
+                            </div>
+                            <progress class="project-progress" max="100" value="0" aria-label="WPU Course progress">0%</progress>
+
+                            <div class="project-actions">
+                                <div class="project-action-buttons">
+                                    <button class="view-details-btn" type="button" data-project="wpu-course" aria-haspopup="dialog">Lihat Detail</button>
+                                </div>
+                                <p class="project-link-note">Course terencana (sertifikat kelulusan belum tersedia).</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Empty state for certificates when none are available yet -->
+                    <div class="empty-state hidden" id="certificatesEmptyState" role="region" aria-label="Informasi Sertifikat">
+                        <div class="empty-state-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" focusable="false">
                                 <circle cx="12" cy="8" r="7"/>
                                 <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
                             </svg>
                         </div>
-                        <div class="certificate-info">
-                            <h4>Web Development Fundamentals</h4>
-                            <p>Completed comprehensive training in HTML, CSS, and JavaScript fundamentals.</p>
-                            <span class="certificate-date">2024</span>
-                        </div>
-                    </div>
-                    <div class="certificate-card">
-                        <div class="certificate-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                <path d="M2 17l10 5 10-5"/>
-                                <path d="M2 12l10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <div class="certificate-info">
-                            <h4>Database Management Systems</h4>
-                            <p>SQL and database design certification from academic coursework.</p>
-                            <span class="certificate-date">2024</span>
-                        </div>
+                        <h3 data-i18n="empty.title">Belum Ada Sertifikat yang Tersedia</h3>
+                        <p data-i18n="empty.text">
+                            Saat ini belum ada dokumen sertifikat atau bukti sertifikasi resmi yang telah diverifikasi untuk ditampilkan.
+                            Dokumen sertifikat akan ditampilkan di sini setelah proses verifikasi selesai.
+                        </p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Experience Section -->
-            <div class="experience-section">
-                <h3 class="section-title">
-                    <span class="title-icon">💼</span>
-                    Academic Experience
-                </h3>
-                <div class="experience-timeline">
-                    <div class="experience-item">
-                        <div class="experience-year">2023 - Present</div>
-                        <div class="experience-details">
-                            <h4>Student Member - LABSE</h4>
-                            <p>Laboratory of Software Engineering</p>
-                            <ul>
-                                <li>Collaborate with team members on software development projects</li>
-                                <li>Participate in code reviews and peer programming sessions</li>
-                                <li>Learn best practices in software engineering</li>
-                            </ul>
-                        </div>
+        <!-- Experience -->
+        <section class="section chapter" id="experience" aria-labelledby="experience-title">
+            <header class="section__header chapter-header">
+                <span class="section__eyebrow" data-i18n="experience.eyebrow">Pengalaman</span>
+                <h2 class="section__title chapter-title" id="experience-title" data-i18n="experience.title">Pengalaman &amp; Keterlibatan</h2>
+                <p class="section__subtitle chapter-subtitle" data-i18n="experience.subtitle">Perjalanan akademik, pengalaman organisasi, proyek, dan pengembangan keterampilan teknologi.</p>
+            </header>
+
+            <div class="section__inner chapter-content">
+                <div class="experience-section">
+                    <h3 class="section-title" data-i18n="experience.sectionTitle">Pengalaman</h3>
+
+                    <div class="experience-timeline" id="experienceTimeline" data-experience-timeline>
+                        <article class="experience-item">
+                            <p class="experience-year" data-i18n="experience.bemPeriod">2025 &ndash; Sekarang</p>
+                            <div class="experience-details">
+                                <span class="experience-type" data-i18n="experience.bemType">Organisasi Mahasiswa</span>
+                                <h4 data-i18n="experience.bemRole">Wakil Menteri Komunikasi dan Informasi &mdash; BEM Polinema</h4>
+                                <p data-i18n="experience.bemOrg">Badan Eksekutif Mahasiswa, Politeknik Negeri Malang</p>
+                                <ul>
+                                    <li data-i18n="experience.bemLi1">Berkontribusi dalam pengelolaan media sosial dan publikasi informasi organisasi.</li>
+                                    <li data-i18n="experience.bemLi2">Berkoordinasi dengan tim dalam pelaksanaan program kerja dan pembuatan konten digital.</li>
+                                    <li data-i18n="experience.bemLi3">Mengembangkan kemampuan komunikasi, kolaborasi, dan manajemen waktu.</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="experience-item">
+                            <p class="experience-year" data-i18n="experience.academicPeriod">2024 &ndash; Sekarang</p>
+                            <div class="experience-details">
+                                <span class="experience-type" data-i18n="experience.academicType">Proyek Akademik</span>
+                                <h4 data-i18n="experience.academicRole">Pengembangan Proyek Akademik</h4>
+                                <p data-i18n="experience.academicOrg">Proyek Perkuliahan D-IV Teknik Informatika</p>
+                                <ul>
+                                    <li data-i18n="experience.academicLi1">Mengembangkan website rekomendasi kafe dan aplikasi pencatatan keuangan.</li>
+                                    <li data-i18n="experience.academicLi2">Mempelajari pengembangan web, database, serta machine learning melalui proyek perkuliahan.</li>
+                                    <li data-i18n="experience.academicLi3">Mengasah kemampuan pemrograman, pemecahan masalah, dan pengujian aplikasi.</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="experience-item">
+                            <p class="experience-year" data-i18n="experience.netsecPeriod">2021 &ndash; Sekarang</p>
+                            <div class="experience-details">
+                                <span class="experience-type" data-i18n="experience.netsecType">Jaringan &amp; Keamanan Siber</span>
+                                <h4 data-i18n="experience.netsecRole">Pembelajaran Jaringan Komputer &amp; Cyber Security</h4>
+                                <p data-i18n="experience.netsecOrg">SMKN 1 Bangil &amp; Belajar Mandiri</p>
+                                <ul>
+                                    <li data-i18n="experience.netsecLi1">Mempelajari dasar jaringan komputer dan Cyber Security sejak bersekolah di SMKN 1 Bangil.</li>
+                                    <li data-i18n="experience.netsecLi2">Pernah menjalani persiapan LKS bidang Cyber Security tingkat provinsi.</li>
+                                    <li data-i18n="experience.netsecLi3">Melanjutkan pembelajaran secara mandiri untuk memperluas pemahaman tentang keamanan sistem dan jaringan.</li>
+                                </ul>
+                            </div>
+                        </article>
                     </div>
-                    <div class="experience-item">
-                        <div class="experience-year">2024</div>
-                        <div class="experience-details">
-                            <h4>Project Team Member</h4>
-                            <p>Various Academic Projects</p>
-                            <ul>
-                                <li>Worked on team-based projects applying SDLC principles</li>
-                                <li>Developed problem-solving skills through real-world scenarios</li>
-                                <li>Gained experience in project management and documentation</li>
-                            </ul>
-                        </div>
+                </div>
+
+                <div class="timeline-section">
+                    <h3 class="section-title" data-i18n="experience.milestonesTitle">Tonggak Pembelajaran</h3>
+                    <div class="timeline">
+                        <article class="timeline-item" data-year="2021–2024" data-i18n-attr="data-year:experience.ms1Year">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="experience.ms1Title">Fondasi Jaringan Komputer</h4>
+                                <p data-i18n="experience.ms1Text">Mempelajari topologi jaringan, pengalamatan IP, perangkat jaringan, dan instalasi kabel. Memperoleh sertifikasi BNSP Junior Technical Support pada 2025.</p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item" data-year="2024" data-i18n-attr="data-year:experience.ms2Year">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="experience.ms2Title">Memulai Perkuliahan Informatika</h4>
+                                <p data-i18n="experience.ms2Text">Mulai mendalami pemrograman, pengembangan aplikasi, dan konsep dasar rekayasa perangkat lunak.</p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item" data-year="2024–2025" data-i18n-attr="data-year:experience.ms3Year">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="experience.ms3Title">Pengembangan Proyek Aplikasi</h4>
+                                <p data-i18n="experience.ms3Text">Mengerjakan proyek akademik, termasuk website rekomendasi kafe dan aplikasi pencatatan keuangan, serta mempelajari basis data.</p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item" data-year="2025 – Sekarang" data-i18n-attr="data-year:experience.ms4Year">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="experience.ms4Title">Eksplorasi Teknologi dan Cyber Security</h4>
+                                <p data-i18n="experience.ms4Text">Memperluas wawasan melalui pembelajaran web development, machine learning, dan belajar mandiri Cyber Security sesuai minat pribadi.</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="chapter contact-section" id="contact">
-        <div class="chapter-header">
-            <span class="chapter-number">📬</span>
-            <h2 class="chapter-title">Get In Touch</h2>
-            <p class="chapter-subtitle">Let's connect and create something amazing</p>
-        </div>
-        <div class="chapter-content">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <p class="contact-message">I'm always open to discussing new opportunities, academic collaborations, or just having a chat about technology and development.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
+        <!-- Social Media / Connect -->
+        <section class="section chapter social-section" id="social" aria-labelledby="social-title">
+            <header class="section__header chapter-header">
+                <span class="section__eyebrow" data-i18n="social.eyebrow">Terhubung</span>
+                <h2 class="section__title chapter-title" id="social-title" data-i18n="social.title">Ikuti &amp; Terhubung</h2>
+                <p class="section__subtitle chapter-subtitle" data-i18n="social.subtitle">Temukan profil dan aktivitas saya di media sosial serta platform pengembangan.</p>
+            </header>
+
+            <div class="section__inner chapter-content">
+                <div class="social-cards-grid">
+                    <a href="mailto:yahyairvansyah5@gmail.com" class="social-card" aria-label="Email M. Yahya Irvansyah" title="Kirim email ke yahyairvansyah5@gmail.com">
+                        <div class="social-card-icon email-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" focusable="false">
+                                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                             </svg>
-                            <a href="mailto:yahyairvansyah5@email.com">yahyairvansyah5@email.com</a>
                         </div>
-                        <div class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                            <span>Malang, East Java, Indonesia</span>
+                        <div class="social-card-info">
+                            <span class="social-card-platform">Email</span>
+                            <span class="social-card-handle">yahyairvansyah5@gmail.com</span>
                         </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        <span class="social-card-arrow" aria-hidden="true">&rarr;</span>
+                    </a>
+
+                    <a href="https://wa.me/6283854169509" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="WhatsApp M. Yahya Irvansyah" title="Hubungi via WhatsApp (+62 838-5416-9509)">
+                        <div class="social-card-icon whatsapp-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" focusable="false">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
                             </svg>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
+                        </div>
+                        <div class="social-card-info">
+                            <span class="social-card-platform">WhatsApp</span>
+                            <span class="social-card-handle">+62 838-5416-9509</span>
+                        </div>
+                        <span class="social-card-arrow" aria-hidden="true">&rarr;</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/yahya-irvansyah-8b0178312/" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="LinkedIn M. Yahya Irvansyah">
+                        <div class="social-card-icon linkedin-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" focusable="false">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </div>
+                        <div class="social-card-info">
+                            <span class="social-card-platform">LinkedIn</span>
+                            <span class="social-card-handle" data-i18n="social.linkedinLabel">Profil LinkedIn</span>
+                        </div>
+                        <span class="social-card-arrow" aria-hidden="true">&rarr;</span>
+                    </a>
+
+                    <a href="https://github.com/Yahya1805" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="GitHub M. Yahya Irvansyah">
+                        <div class="social-card-icon github-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" focusable="false">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                             </svg>
-                        </a>
-                    </div>
+                        </div>
+                        <div class="social-card-info">
+                            <span class="social-card-platform">GitHub</span>
+                            <span class="social-card-handle">@Yahya1805</span>
+                        </div>
+                        <span class="social-card-arrow" aria-hidden="true">&rarr;</span>
+                    </a>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="your@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required placeholder="What's this about?">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="Your message..." rows="5"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <span>Send Message</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="22" y1="2" x2="11" y2="13"/>
-                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                        </svg>
-                    </button>
-                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project detail dialog. Content is rendered from js/data.js by js/main.js. -->
+    <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" aria-hidden="true">
+        <div class="modal-content" tabindex="-1">
+            <button class="modal-close" id="modalClose" type="button" aria-label="Close project details">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content is inserted by js/main.js. -->
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-logo">
+            <div class="footer-logo" aria-hidden="true">
                 <span class="logo-bracket">{</span>YI<span class="logo-bracket">}</span>
             </div>
-            <p class="footer-text">© 2024 M. Yahya Irvanskyah. Built with passion and lots of coffee.</p>
-            <div class="footer-nav">
-                <a href="#hero">Home</a>
-                <a href="#chapter1">About</a>
-                <a href="#chapter2">Skills</a>
-                <a href="#chapter3">Projects</a>
-                <a href="#contact">Contact</a>
+
+            <p class="footer-text">
+                &copy; <span id="currentYear">2026</span> M. Yahya Irvansyah.
+                <span data-i18n="footer.builtWith">Dibuat dengan HTML, CSS, dan JavaScript.</span>
+            </p>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#home" data-i18n="nav.home">Beranda</a>
+                <a href="#about" data-i18n="nav.about">Tentang</a>
+                <a href="#skills" data-i18n="nav.skills">Keahlian</a>
+                <a href="#projects" data-i18n="nav.projects">Proyek</a>
+                <a href="#experience" data-i18n="nav.experience">Pengalaman</a>
+                <a href="#social" data-i18n="nav.social">Sosial</a>
+            </nav>
+
+            <div class="footer-social" aria-label="Social media links">
+                <div class="social-links">
+                    <a href="mailto:yahyairvansyah5@gmail.com" class="social-link" aria-label="Email M. Yahya Irvansyah" title="Kirim email ke yahyairvansyah5@gmail.com">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false">
+                            <rect width="20" height="16" x="2" y="4" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/6283854169509" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp M. Yahya Irvansyah" title="WhatsApp: +62 838-5416-9509">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true" focusable="false">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yahya-irvansyah-8b0178312/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true" focusable="false">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Yahya1805" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true" focusable="false">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

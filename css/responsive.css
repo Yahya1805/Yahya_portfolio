@@ -1,0 +1,382 @@
+/* ==========================================================================
+   Portfolio CSS - Responsive and accessibility preferences
+   Final cascade overrides, all original media queries, reduced-motion rules,
+   and high-contrast overrides. Extracted from css/style.css during Phase 05B.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Reveal motion (final cascade layer)
+   This rule must load after the feature styles. In the original stylesheet it
+   appeared after the feature transition declarations, so moving it into
+   base.css changed the computed transitions on .skill-card and .work-item.
+   -------------------------------------------------------------------------- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity 500ms ease,
+        transform 500ms ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   16. Responsive layout
+   -------------------------------------------------------------------------- */
+@media (min-width: 901px) {
+    #experience .section__inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        gap: clamp(2rem, 5vw, 4rem);
+        align-items: start;
+    }
+
+    #experience .timeline-section {
+        min-width: 0;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1002;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.2rem;
+        width: min(84vw, 20rem);
+        height: 100vh;
+        height: 100dvh;
+        margin-left: 0;
+        padding: 5.75rem 1.25rem 1.5rem;
+        overflow-y: auto;
+        border-left: 1px solid var(--border);
+        background: var(--bg-alt);
+        box-shadow: -24px 0 60px rgba(0, 0, 0, 0.42);
+        transform: translateX(100%);
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+            transform var(--transition-base),
+            visibility var(--transition-base);
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .nav-menu li {
+        display: block;
+    }
+
+    .nav-link {
+        display: flex;
+        width: 100%;
+        padding: 0.7rem 0.85rem;
+        font-size: 0.86rem;
+    }
+
+    .nav-cta {
+        width: 100%;
+        min-height: 2.75rem;
+        margin: 0.65rem 0 0;
+        font-size: 0.84rem;
+    }
+
+    .nav-actions {
+        margin-left: auto;
+    }
+
+    .nav-toggle {
+        display: flex;
+        position: relative;
+        z-index: 1003;
+    }
+
+    .about-grid {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        gap: 2rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        max-width: 680px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .hero-copy {
+        max-width: 670px;
+    }
+
+    .hero-visual {
+        justify-self: center;
+        width: 100%;
+        max-width: 390px;
+        margin: 0 auto;
+        padding-bottom: 1.5rem;
+    }
+
+    .hero-portrait {
+        width: min(86vw, 330px);
+    }
+
+    .hero-title {
+        font-size: clamp(2.7rem, 9vw, 4rem);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        max-width: 310px;
+    }
+
+    .quick-facts {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 4.25rem;
+    }
+
+    .section {
+        padding: clamp(3.75rem, 10vw, 5rem) 0;
+    }
+
+    .section__header {
+        margin-bottom: 2.25rem;
+    }
+
+    .section__title {
+        font-size: clamp(1.75rem, 7vw, 2.35rem);
+    }
+
+    .hero {
+        padding-top: 3.5rem;
+        padding-bottom: 4.25rem;
+    }
+
+    .hero-badge {
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.55rem, 11vw, 3.5rem);
+    }
+
+    .hero-actions {
+        gap: 0.6rem;
+    }
+
+    .code-card {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: min(100%, 330px);
+        margin: 1rem auto 0;
+    }
+
+    .hero-visual {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 360px;
+        padding-bottom: 0;
+    }
+
+    .hero-portrait {
+        width: min(100%, 330px);
+    }
+
+    .quick-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        min-height: 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-card {
+        padding: 1.15rem;
+    }
+
+    .social-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal {
+        padding: 1rem;
+    }
+
+    .modal-content {
+        max-height: calc(100dvh - 2rem);
+    }
+
+    .footer {
+        padding: 2.35rem 0 2rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero-title {
+        font-size: clamp(2.35rem, 12vw, 3rem);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-button,
+    .btn-outline {
+        width: 100%;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-info {
+        padding: 1.1rem;
+    }
+
+    .certificate-card {
+        gap: 0.8rem;
+    }
+
+    .certificate-icon {
+        width: 2.45rem;
+        height: 2.45rem;
+    }
+
+    .experience-timeline,
+    .timeline {
+        padding-left: 1.45rem;
+    }
+
+    .experience-item::before {
+        left: -1.45rem;
+    }
+
+    .timeline-marker {
+        left: -1.45rem;
+    }
+
+    .footer-nav {
+        gap: 0.35rem 0.8rem;
+    }
+}
+
+@media (max-width: 380px) {
+    :root {
+        --container-padding: 1rem;
+    }
+
+    .hero-badge {
+        font-size: 0.6rem;
+    }
+
+    .hero-tagline {
+        font-size: 0.92rem;
+    }
+
+    .hero-tech .tech-tag {
+        font-size: 0.62rem;
+    }
+
+    .code-card {
+        padding: 0.8rem;
+    }
+
+    .code-card pre {
+        font-size: 0.6rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   17. Accessibility preferences
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .fade-in {
+        opacity: 1;
+        transform: none;
+    }
+
+    .cta-button:hover,
+    .submit-btn:hover,
+    .nav-cta:hover,
+    .project-card:hover,
+    .skill-card:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-contrast: high) {
+    :root {
+        --text-secondary: #dfe3f5;
+        --text-muted: #c1c6dc;
+        --border: rgba(255, 255, 255, 0.28);
+        --border-strong: rgba(255, 255, 255, 0.42);
+        --surface: #141830;
+        --surface-raised: #1a2040;
+    }
+}

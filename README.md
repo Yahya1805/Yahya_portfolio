@@ -1,153 +1,88 @@
-# M. Yahya Irvanskyah - Personal Portfolio
+# Halo, Saya M. Yahya Irvansyah 👋
 
-A unique, modern portfolio website documenting my academic journey as a developer.
+> Mahasiswa D-IV Teknik Informatika di Politeknik Negeri Malang yang berfokus pada **Web Development** dan memiliki ketertarikan pada **Cyber Security**.
 
-## 📖 Overview
-
-This portfolio follows the theme **"Academic Journey as a Developer"** with chapter-based sections representing different stages of learning throughout university.
-
-## 🎨 Design Concept
-
-The website is structured as a storytelling journey rather than a standard portfolio:
-
-- **Chapter 1**: The Beginning - About my university entry and motivation
-- **Chapter 2**: Learning to Code - Technical and soft skills development
-- **Chapter 3**: Projects & Experiments - Academic and personal projects
-- **Chapter 4**: Certificates & Experience - Milestones and achievements
-
-## 🚀 Features
-
-### Core Features
-- **Responsive Design**: Works on desktop, tablet, and mobile devices
-- **Smooth Animations**: Scroll-triggered fade-in animations and hover effects
-- **Project Filtering**: Filter projects by category (Academic/Personal)
-- **Interactive Modals**: Detailed project information in modal windows
-- **Contact Form**: Functional contact form with validation
-- **Reading Progress Bar**: Visual indicator of page scroll progress
-
-### Technical Features
-- **Pure HTML/CSS/JavaScript**: No frameworks or libraries
-- **CSS Custom Properties**: Maintainable design system with variables
-- **Intersection Observer**: Efficient scroll animations
-- **Accessibility**: Keyboard navigation and focus states
-- **Performance Optimized**: Minimal code, no external dependencies
-
-## 📁 Project Structure
-
-```
- Yahya_portfolio/
- ├── index.html          # Main HTML file with complete structure
- ├── css/
- │   └── style.css       # All styling with responsive design
- └── js/
-     └── main.js         # Interactive functionality
-```
-
-## 🎯 Sections
-
-### 1. Hero Section
-- Strong, non-generic headline
-- Animated statistics counter
-- Call-to-action button
-
-### 2. About Me (Chapter 1)
-- Personal story about starting university
-- Academic background and motivation
-- Quick facts with icons
-
-### 3. Skills (Chapter 2)
-- Technical skills with progress bars
-- Soft skills with visual indicators
-- Learning journey timeline
-
-### 4. Projects (Chapter 3)
-- Interactive project cards
-- Category filtering (Academic/Personal)
-- Detailed project modals
-
-### 5. Certificates & Experience (Chapter 4)
-- Certificate cards
-- Academic experience timeline
-- Organization involvement
-
-### 6. Contact Section
-- Contact information
-- Social media links
-- Functional contact form
-
-## 🎨 Color Palette
-
-- **Background**: Dark (#0a0a0b)
-- **Secondary**: Slightly lighter dark (#131316)
-- **Text**: Off-white (#f5f5f7)
-- **Accent**: Blue (#3b82f6)
-
-## 📱 Responsive Breakpoints
-
-- **Desktop**: > 1024px
-- **Tablet**: 768px - 1024px
-- **Mobile**: < 768px
-
-## 🛠️ Customization
-
-### Colors
-Edit CSS variables in `:root` at the top of `style.css`:
-
-```css
-:root {
-    --color-bg-primary: #0a0a0b;
-    --color-accent: #3b82f6;
-    /* ... more variables */
-}
-```
-
-### Content
-Edit `index.html` to update:
-- Personal information
-- Project details (in `projectData` object in `main.js`)
-- Skills and certifications
-- Contact information
-
-### Animations
-Adjust animation timing in `style.css`:
-```css
---transition-base: 250ms ease;
---transition-slow: 350ms ease;
-```
-
-## 📦 How to Use
-
-1. Open `index.html` in any modern web browser
-2. Navigate through chapters using the navbar or scroll
-3. Filter projects using the category buttons
-4. Click "View Details" on projects for more information
-5. Use the contact form to send a message
-
-## 🔧 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 📄 License
-
-This portfolio is for personal use. Feel free to use as inspiration for your own portfolio.
-
-## 👨‍💻 Author
-
-**M. Yahya Irvanskyah**
-- Undergraduate Student (D-IV Applied Informatics)
-- Politeknik Negeri Malang
-- Focus: Web Development, Programming
-
-## 📞 Contact
-
-- Email: yahyairvanskyah@email.com
-- GitHub: [github.com](https://github.com)
-- LinkedIn: [linkedin.com](https://linkedin.com)
-- Instagram: [instagram.com](https://instagram.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yahya-irvansyah-8b0178312/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Yahya1805)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=flat&logo=whatsapp&logoColor=white)](https://wa.me/6283854169509)
+[![Email](https://img.shields.io/badge/Email-yahyairvansyah5%40gmail.com-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:yahyairvansyah5@gmail.com)
 
 ---
 
-Built with passion and lots of coffee ☕
+## 📌 Tentang Saya
+
+Saya adalah mahasiswa Program Studi D-IV Teknik Informatika di Politeknik Negeri Malang. Memiliki latar belakang pendidikan vokasi di bidang Teknik Komputer dan Jaringan (TKJ), saya memiliki ketertarikan yang kuat terhadap cara kerja teknologi informasi, mulai dari infrastruktur jaringan hingga pengembangan antarmuka dan sistem web. 
+
+Saat ini, saya aktif mengembangkan kemampuan teknis dalam pengembangan web yang fungsional dan terstruktur, sembari terus mendalami pemahaman di bidang keamanan siber.
+
+---
+
+## 🎯 Fokus dan Minat
+
+- **Web Development**: Mempelajari dan mengembangkan aplikasi web yang responsif, terstruktur, dan ramah pengguna menggunakan HTML, CSS, JavaScript, PHP, dan basis data.
+- **Cyber Security**: Mempelajari dasar keamanan sistem, analisis kerentanan, dan keamanan jaringan secara mandiri.
+- **Network Engineering**: Memiliki pemahaman fundamental mengenai jaringan komputer dari pendidikan SMK, termasuk perencanaan topologi, konfigurasi perangkat, dan pengkabelan.
+
+---
+
+## 🎓 Pendidikan
+
+- **D-IV Teknik Informatika — Politeknik Negeri Malang**  
+  *2024 – Sekarang*
+- **Teknik Komputer dan Jaringan — SMK Negeri 1 Bangil**  
+  *2021 – 2024*
+
+---
+
+## 💼 Pengalaman
+
+- **Wakil Menteri Komunikasi dan Informasi — BEM Polinema** *(2025 – Sekarang)*  
+  Bertanggung jawab dalam pengelolaan publikasi informasi resmi, manajemen media sosial organisasi, serta koordinasi tim kerja dalam penyampaian informasi yang efektif.
+- **Pembelajaran & Persiapan Cyber Security** *(Sejak SMK – Sekarang)*  
+  Memulai ketertarikan di bidang keamanan siber sejak SMK, termasuk mengikuti persiapan LKS (Lomba Kompetensi Siswa) Cyber Security tingkat provinsi serta terus melanjutkan pembelajaran mandiri terkait keamanan sistem dan jaringan.
+
+---
+
+## 🚀 Proyek
+
+Berikut beberapa proyek yang telah saya kembangkan dan pelajari:
+
+- **Website Rekomendasi Kafe**  
+  Platform web informatif untuk membantu pengguna menemukan referensi kafe dan tempat berkumpul yang sesuai, dengan tampilan antarmuka yang rapi dan mudah digunakan. *(HTML, CSS, JavaScript)*
+- **Aplikasi Pengelolaan Keuangan**  
+  Aplikasi berbasis Java yang dirancang untuk membantu pencatatan transaksi keuangan pribadi, pemantauan pengeluaran, serta pengelolaan data secara terstruktur. *(Java)*
+- **Software Engineering Laboratory (Proyek Akademik)**  
+  Penerapan prinsip rekayasa perangkat lunak terstruktur (SDLC), mencakup tahap analisis kebutuhan, perancangan sistem, implementasi, hingga pengujian aplikasi.
+- **Eksplorasi Machine Learning — Estimasi Panen Selada**  
+  Proyek pembelajaran penerapan model machine learning dasar untuk pengolahan data dan estimasi prediksi hasil panen tanaman selada.
+
+---
+
+## 📜 Sertifikasi
+
+- **Sertifikat Kompetensi BNSP — Bidang Jaringan Komputer** *(2025)*  
+  *Okupasi: Junior Technical Support* (LSP SMK)  
+  Mencakup unit kompetensi pengumpulan data peralatan jaringan, perancangan topologi jaringan, penentuan spesifikasi perangkat, hingga instalasi infrastruktur kabel jaringan.
+
+---
+
+## 🛠️ Keterampilan & Teknologi
+
+Teknologi dan alat yang saya pelajari serta gunakan dalam proyek akademik maupun eksplorasi mandiri:
+
+- **Bahasa Pemrograman & Web**: HTML, CSS, JavaScript, PHP, Java
+- **Basis Data**: MySQL
+- **Alat & Sistem Operasi**: Git, GitHub, Linux
+- **Bidang Terkait**: Fundamental Jaringan Komputer, Dasar Machine Learning, Cyber Security
+
+---
+
+## 📫 Kontak
+
+Silakan hubungi saya untuk diskusi, kolaborasi proyek, atau sekadar berbagi wawasan:
+
+- **Portfolio Website**: [yahya1805.github.io/Yahya_portfolio](https://yahya1805.github.io/Yahya_portfolio/)
+- **LinkedIn**: [linkedin.com/in/yahya-irvansyah-8b0178312](https://www.linkedin.com/in/yahya-irvansyah-8b0178312/)
+- **WhatsApp**: [+62 838-5416-9509](https://wa.me/6283854169509)
+- **Email**: [yahyairvansyah5@gmail.com](mailto:yahyairvansyah5@gmail.com)
+- **GitHub**: [github.com/Yahya1805](https://github.com/Yahya1805)

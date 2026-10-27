@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Portfolio CSS - Certificates
+   Certificate cards, progress, status, and native details/summary.
+   Extracted unchanged from css/style.css during Phase 05B.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   11. Certificates
+   -------------------------------------------------------------------------- */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.certificate-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    min-width: 0;
+    padding: 1.35rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition:
+        border-color var(--transition-base),
+        background-color var(--transition-base);
+}
+
+.certificate-card:hover {
+    border-color: var(--accent-border);
+    background: var(--surface-raised);
+}
+
+.certificate-icon {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: 1px solid rgba(91, 82, 240, 0.18);
+    border-radius: var(--radius-md);
+    background: var(--accent-soft);
+    color: var(--accent-light);
+}
+
+.certificate-icon svg {
+    width: 1.35rem;
+    height: 1.35rem;
+}
+
+.certificate-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.certificate-info > .status-badge {
+    margin-bottom: 0.55rem;
+}
+
+.certificate-info h3 {
+    margin-bottom: 0.35rem;
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.certificate-info > p:not(.certificate-meta) {
+    margin-bottom: 0.35rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.65;
+}
+
+.certificate-meta {
+    margin-bottom: 0.65rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.63rem;
+    line-height: 1.5;
+}
+
+.certificate-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.certificate-progress-label {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+}
+
+.certificate-progress progress {
+    height: 6px;
+}
+
+.certificate-details {
+    border-top: 1px solid var(--border);
+    padding-top: 0.7rem;
+}
+
+.certificate-details summary {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: fit-content;
+    min-height: 2.75rem;
+    padding: 0.35rem 0;
+    color: var(--accent-light);
+    font-size: 0.74rem;
+    font-weight: 600;
+    line-height: 1.5;
+    cursor: pointer;
+    list-style: none;
+    transition: color var(--transition-fast);
+}
+
+.certificate-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.certificate-details summary::before {
+    content: "+";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--accent-border);
+    border-radius: 50%;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    line-height: 1;
+}
+
+.certificate-details[open] summary::before {
+    content: "−";
+}
+
+.certificate-details summary:hover {
+    color: #ffffff;
+}
+
+.certificate-details__body {
+    padding-top: 0.55rem;
+}
+
+.certificate-details__body p {
+    margin-bottom: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.74rem;
+    line-height: 1.65;
+}
+
+.certificate-details__body p:last-child {
+    margin-bottom: 0;
+}
+

@@ -1,0 +1,234 @@
+/* ==========================================================================
+   Portfolio CSS - Contact, form, notification, and footer
+   Contact details, form controls, form status, notification shell, and footer.
+   Extracted unchanged from css/style.css during Phase 05B.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   12. Social Media / Connect Section
+   -------------------------------------------------------------------------- */
+.social-section {
+    background:
+        radial-gradient(ellipse at 50% 30%, rgba(91, 82, 240, 0.08) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.012), transparent);
+    padding-bottom: clamp(3rem, 7vw, 5rem);
+}
+
+.social-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.35rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.social-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-border);
+    background: var(--surface-raised);
+    box-shadow: var(--shadow-md);
+    color: var(--text);
+}
+
+.social-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.1rem;
+    height: 3.1rem;
+    border-radius: var(--radius-lg);
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.social-card-icon.whatsapp-icon {
+    color: #25d366;
+}
+
+.social-card:hover .social-card-icon.whatsapp-icon {
+    background: rgba(37, 211, 102, 0.15);
+    border-color: rgba(37, 211, 102, 0.4);
+    color: #25d366;
+}
+
+.social-card-icon.email-icon {
+    color: #ea4335;
+}
+
+.social-card:hover .social-card-icon.email-icon {
+    background: rgba(234, 67, 53, 0.15);
+    border-color: rgba(234, 67, 53, 0.4);
+    color: #ea4335;
+}
+
+.social-card-icon.linkedin-icon {
+    color: #0a66c2;
+}
+
+.social-card:hover .social-card-icon.linkedin-icon {
+    background: rgba(10, 102, 194, 0.15);
+    border-color: rgba(10, 102, 194, 0.4);
+    color: #0a66c2;
+}
+
+.social-card-icon.github-icon {
+    color: var(--text);
+}
+
+.social-card:hover .social-card-icon.github-icon {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.social-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.social-card-platform {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.01em;
+}
+
+.social-card-handle {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+
+.social-card-arrow {
+    margin-left: auto;
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.social-card:hover .social-card-arrow {
+    color: var(--accent-light);
+    transform: translateX(4px);
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--text-secondary);
+    transition:
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        background-color var(--transition-fast);
+}
+
+.social-link:hover {
+    color: var(--accent-light);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+/* --------------------------------------------------------------------------
+   13. Footer
+   -------------------------------------------------------------------------- */
+.footer {
+    padding: 2.75rem 0 2.25rem;
+    border-top: 1px solid var(--border);
+    background: var(--bg-deep);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    text-align: center;
+}
+
+.footer-logo {
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.footer-text {
+    color: var(--text-muted);
+    font-size: 0.74rem;
+    line-height: 1.6;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem 1rem;
+}
+
+.footer-nav a {
+    color: var(--text-secondary);
+    font-size: 0.74rem;
+    transition: color var(--transition-fast);
+}
+
+.footer-nav a:hover {
+    color: var(--accent-light);
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social .contact-placeholder {
+    margin: 0;
+    font-size: 0.7rem !important;
+}
+
+
+.notification {
+    max-width: calc(100vw - 2rem);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    font-size: 0.82rem;
+}

@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Portfolio CSS - Experience and learning milestones
+   Experience timeline and learning milestone timeline.
+   Extracted unchanged from css/style.css during Phase 05B.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   10. Experience and learning milestones
+   -------------------------------------------------------------------------- */
+.experience-section {
+    min-width: 0;
+}
+
+.experience-timeline,
+.timeline {
+    position: relative;
+    padding-left: 1.65rem;
+}
+
+.experience-timeline::before,
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0.35rem;
+    bottom: 0.35rem;
+    left: 0.28rem;
+    width: 1px;
+    background: linear-gradient(180deg, var(--accent-border), var(--border) 75%, transparent);
+}
+
+.experience-item {
+    position: relative;
+    padding-bottom: 1.65rem;
+}
+
+.experience-item:last-child {
+    padding-bottom: 0;
+}
+
+.experience-item::before {
+    content: "";
+    position: absolute;
+    top: 0.42rem;
+    left: -1.65rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border: 2px solid var(--bg);
+    border-radius: 50%;
+    background: var(--accent-light);
+    box-shadow: 0 0 0 3px rgba(91, 82, 240, 0.14);
+}
+
+.experience-year {
+    margin-bottom: 0.35rem;
+    color: var(--accent-light);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.experience-type {
+    display: inline-flex;
+    margin-bottom: 0.45rem;
+    padding: 0.18rem 0.45rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.02em;
+}
+
+.experience-details h4 {
+    margin-bottom: 0.2rem;
+    color: var(--text);
+    font-size: 0.98rem;
+    font-weight: 600;
+}
+
+.experience-details > p {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.65;
+}
+
+.experience-details ul {
+    margin-top: 0.65rem;
+    padding-left: 1rem;
+    list-style: disc;
+}
+
+.experience-details li {
+    margin-bottom: 0.3rem;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    line-height: 1.65;
+}
+
+.experience-details li::marker {
+    color: var(--accent-light);
+}
+
+.timeline-section {
+    margin-top: clamp(2.25rem, 5vw, 3.25rem);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 1.45rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: attr(data-year);
+    display: block;
+    margin-bottom: 0.18rem;
+    color: var(--accent-light);
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 0.3rem;
+    left: -1.65rem;
+    width: 0.55rem;
+    height: 0.55rem;
+    border: 2px solid var(--bg);
+    border-radius: 50%;
+    background: var(--text-muted);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+.timeline-content h4 {
+    margin-bottom: 0.15rem;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    line-height: 1.65;
+}
+
