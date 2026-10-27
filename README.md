@@ -81,7 +81,7 @@ Teknologi dan alat yang saya pelajari serta gunakan dalam proyek akademik maupun
 
 Silakan hubungi saya untuk diskusi, kolaborasi proyek, atau sekadar berbagi wawasan:
 
-- **Portfolio Website**: [yahya1805.github.io/Yahya_portfolio](https://yahya1805.github.io/Yahya_portfolio/)
+- **Portfolio Website**: [yahya1805.github.io/Yahya_portfolio](https://yahyaportfolio-flame.vercel.app/)
 - **LinkedIn**: [linkedin.com/in/yahya-irvansyah-8b0178312](https://www.linkedin.com/in/yahya-irvansyah-8b0178312/)
 - **WhatsApp**: [+62 838-5416-9509](https://wa.me/6283854169509)
 - **Email**: [yahyairvansyah5@gmail.com](mailto:yahyairvansyah5@gmail.com)
